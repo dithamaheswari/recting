@@ -55,7 +55,7 @@
 <div style="width: 1417px; height: 429.67px; position: relative">
   <div style="width: 951.30px; height: 429.67px; left: 0px; top: 0px; position: absolute">
     <div style="width: 642.92px; height: 429.67px; left: 0px; top: 0px; position: absolute">
-    <iframe style="width: 642.92px; height: 429.67px; left: 0px; top: 0px; position: absolute; border: 1px solid" src="<?= $data['movie']['trailer']; ?>"></iframe>
+    <iframe style="width: 642.92px; height: 429.67px; left: 0px; top: 0px; position: absolute; border: 1px solid" src="<?= isset($data['movieDetails']) ? $data['movieDetails']['trailer'] : ''; ?>"></iframe>
 
 
       <div style="width: 133px; height: 19px; left: 74px; top: 384.84px; position: absolute; color: white; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">Play Trailer</div>
@@ -63,26 +63,26 @@
         <div style="width: 47.57px; height: 47.57px; left: 0px; top: 0px; position: absolute; background: white; border: 1px solid"></div>
       </div>
     </div>
-    <img style="width: 298.87px; height: 429.67px; left: 652.43px; top: -0px; position: absolute; border: 1px solid" src="<?= BASEURL ?>img/thumbnails/<?= $data['movie']['thumbnail'] ?>" />
+    <img style="width: 298.87px; height: 429.67px; left: 652.43px; top: -0px; position: absolute; border: 1px solid" src="<?= isset($data['movieDetails']) ? $data['movieDetails']['thumbnail'] : ''; ?>" />
   </div>
   <div style="width: 428px; height: 324.35px; left: 989px; top: 0.49px; position: absolute">
     <div style="width: 427.65px; height: 130.35px; left: 0.35px; top: 0px; position: absolute">
       <div style="width: 424.15px; height: 62.66px; left: 3.50px; top: 67.69px; position: absolute">
         <div style="width: 94.01px; height: 38.23px; left: 0px; top: 5.15px; position: absolute">
           <div style="width: 34.28px; height: 32.65px; left: 0px; top: 0.65px; position: absolute; background: #FBB500; border: 1px solid"></div>
-          <div style="width: 56.29px; height: 22.99px; left: 37.73px; top: 15.24px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 29px; word-wrap: break-word"> <p> <?= $data['movie']['rating']; ?></p></div>
+          <div style="width: 56.29px; height: 22.99px; left: 37.73px; top: 15.24px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 29px; word-wrap: break-word"> <p><?= isset($data['movieDetails']) ? $data['movieDetails']['rating'] : ''; ?></p></div>
           <div style="width: 55.49px; height: 13.48px; left: 38.52px; top: 0px; position: absolute; color: white; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 17px; word-wrap: break-word">Rating</div>
         </div>
-        <div style="width: 233px; height: 38px; left: 191.15px; top: 24.66px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word"> <p>Sutradara :  <?= $data['movie']['producer']; ?>/p></div>
-        <div style="width: 216.42px; height: 19.03px; left: 190.73px; top: 0px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word"> <p><?= $data['movie']['year_release']; ?></p></div>
+        <div style="width: 233px; height: 38px; left: 191.15px; top: 24.66px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word"> <p>Sutradara :  <?= isset($data['movieDetails']) ? $data['movieDetails']['producer'] : ''; ?></p></div>
+        <div style="width: 216.42px; height: 19.03px; left: 190.73px; top: 0px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word"> <p> <?= isset($data['movieDetails']) ? $data['movieDetails']['year_release'] : ''; ?></p></div>
       </div>
-      <div style="width: 283.81px; height: 45.98px; left: 0px; top: 0px; position: absolute; color: white; font-size: 32px; font-family: Inter; font-weight: 400; line-height: 58px; word-wrap: break-word"> <h2><?= $data['movie']['title']; ?>"</h2></div>
+      <div style="width: 283.81px; height: 45.98px; left: 0px; top: 0px; position: absolute; color: white; font-size: 32px; font-family: Inter; font-weight: 400; line-height: 58px; word-wrap: break-word"> <h2><?= isset($data['movieDetails']) ? $data['movieDetails']['title'] : ''; ?></h2></div>
     </div>
     <div style="width: 428px; height: 191px; left: 0px; top: 133.35px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
       <div style="width: 428px; height: 0px; border: 0.50px white solid"></div>
       <div style="width: 410.65px; height: 88.91px; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 19px; word-wrap: break-word"> <p> <?= isset($data['movieDetails']) ? $data['movieDetails']['sinopsis'] : ''; ?></p></div>
-      <!-- <div style="width: 411px; height: 30px; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 19px; word-wrap: break-word"> genre</div> -->
-      <div style="width: 411px; height: 41px; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 19px; word-wrap: break-word"> <p>Aktor :   <?= $data['movie']['actor']; ?></p></div>
+      <div style="width: 411px; height: 30px; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 19px; word-wrap: break-word"> <p>Genre :   <?= isset($data['movieDetails']) ? $data['movieDetails']['rating'] : ''; ?></p></div>
+      <div style="width: 411px; height: 41px; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 19px; word-wrap: break-word"> <p>Aktor :   <?= isset($data['movieDetails']) ? $data['movieDetails']['actor'] : ''; ?></p></div>
     </div>
   </div>
 </div>

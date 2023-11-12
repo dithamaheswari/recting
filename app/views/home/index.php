@@ -80,14 +80,20 @@
                 <div class="col-12">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <?php foreach ($data['movies_recent'] as $movie) { ?>
+                          <?php foreach ($data['movies_recent'] as $movie) { ?>
+                            
                                 <div class="swiper-slide">
+                               
                                     <img src="<?= BASEURL ?>img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" style="aspect-ratio: 2.9/4;">
                                     <div class="wrapper p-3 rounded-bottom" style="background-color: rgba(255,255,255,0.04);">
-                                        <p class="text-light mb-0"><?= $movie['title']; ?> <span class="text-secondary">(<?= $movie['rating']; ?>)</span></p>
+                                    
+                                    <a href="<?= BASEURL ?>filmselected.php?id=<?= $movie['id'] ?>"> <p class="text-light mb-0"><?= $movie['title']; ?> 
+                                    <span class="text-secondary">(<?= $movie['rating']; ?>)</span></p>    </a>
                                     </div>
                                 </div>
-                            <?php } ?>
+                        
+                        <?php } ?>
+
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>

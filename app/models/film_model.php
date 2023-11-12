@@ -27,8 +27,28 @@ class film_model
         $this->db->query('SELECT * FROM movies WHERE id=:id');
         $this->db->bind('id', $id);
         $this->db->execute();
+         
         return $this->db->resultSingle();
+        
     }
+
+    public function getAllComment()
+    {
+        $this->db->query("SELECT u.username, c.* FROM comment c INNER JOIN users u ON c.id_user = u.id");
+    
+        return $this->db->resultSet();
+    }
+
+    public function getAllRec()
+    {
+        $this->db->query("SELECT * FROM movies;");
+        return $this->db->resultSet();
+    }
+
+  
+
+   
+    
 
     public function insertFilm($data)
     {
@@ -71,4 +91,6 @@ class film_model
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    
 }

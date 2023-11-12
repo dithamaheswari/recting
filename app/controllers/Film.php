@@ -29,6 +29,19 @@ class Film extends Controller
     $this->view('templates/footer', $data);
   }
 
+  public function Moviedetail($id)
+  {
+    $data['title'] = " Koleksi Film";
+    $data['movie'] = $this->model('film_model')->getMovie($id);
+
+    $this->view('templates/header', $data);
+    $this->view('templates/sidebar', $data);
+    $this->view('home/filmselected', $data);
+    $this->view('templates/footer', $data);
+  }
+
+  
+
   public function tambah()
   {
     $data['title'] = " Koleksi Film";

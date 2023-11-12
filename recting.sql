@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 07, 2023 at 04:07 AM
+-- Generation Time: Nov 12, 2023 at 09:21 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `recting`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id_comment` int NOT NULL,
+  `id_user` int NOT NULL,
+  `user_rating` double NOT NULL DEFAULT '0',
+  `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `tgl` date NOT NULL,
+  `id_film` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id_comment`, `id_user`, `user_rating`, `comment`, `tgl`, `id_film`) VALUES
+(10001, 12, 9.3, 'hehe', '2023-10-11', 1),
+(10002, 1, 3, 'fghgh', '2023-11-12', 6);
 
 -- --------------------------------------------------------
 
@@ -50,6 +73,25 @@ INSERT INTO `movies` (`id`, `thumbnail`, `title`, `producer`, `actor`, `year_rel
 (9, '6548efecd031b.jpeg', 'Venom: Let There Be Carnage', 'Admin', 'Admin', '2021', 5.9, 'Admin', 'Lorem Ipsum'),
 (10, '6548f030dcf02.jpeg', 'Rampage', 'Admin', 'Admin', '2018', 6.1, 'Admin', 'Lorem Ipsum'),
 (11, '6548f0773f249.jpeg', 'Godzilla: King of the Monsters', 'Admin', 'Admin', '2019', 6, 'Admin', 'Lorem Ipsum');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `role`
+--
+
+CREATE TABLE `role` (
+  `id_role` int NOT NULL,
+  `role` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `role`
+--
+
+INSERT INTO `role` (`id_role`, `role`) VALUES
+(1, 'Admin'),
+(2, 'Member');
 
 -- --------------------------------------------------------
 

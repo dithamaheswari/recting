@@ -35,7 +35,7 @@ class film_model
         $this->db->query('SELECT * FROM movies WHERE id=:id');
         $this->db->bind('id', $id);
         $this->db->execute();
-         
+        
         return $this->db->resultSingle();
         
     }
@@ -47,9 +47,20 @@ class film_model
         return $this->db->resultSet();
     }
 
+    public function insertComment($data){
+        $query = "INSERT INTO comment VALUES (null, :comment, :tgl, :user_rating, :id_user, id_film)";
+        $this->db->query($query);
+        $this->db->bind('comment', $data['comment']);
+        $this->db->bind('tgl', $data['tgl']);
+        $this->db->bind('user_rating', $data['user_rating']);
+        $this->db->execute();
+        return $this->db->rowCount();
+
+    }
+
     public function getAllRec()
     {
-        $this->db->query("SELECT * FROM movies;");
+        $this->db->query("SELECT * FROM movies WHERE producer=:producer");
         return $this->db->resultSet();
     }
 

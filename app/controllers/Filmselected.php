@@ -11,13 +11,12 @@ class Filmselected extends Controller {
         $data['title'] = "Halaman Filmselected";
         $data['movies_recent'] = $this->model('film_model')->getAllMovies();
         $data['movies_rating'] = $this->model('film_model')->getAllMoviesRating();
+        $data['comment'] = $this->model("film_model")->getAllComment();
         
 
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-           
-
-           
+          
             $data['movieDetails'] = $this->model("film_model")->getMovie($id);
             if ($data['movieDetails']) {
                
@@ -42,7 +41,7 @@ class Filmselected extends Controller {
         exit;
       }
     }
-    
+
 
 }
 

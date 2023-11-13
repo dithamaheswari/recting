@@ -41,6 +41,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .login .card-login {
     padding: 52px 42px;
     border-radius: 4px;
@@ -224,4 +225,214 @@ nav .nav-link:hover {
 .topbar .username {
     font-size: 1.125rem;
     color: rgba(var(--light-color), 1);
+}
+
+.header-container {
+    width: 1417px;
+    height: 429.67px;
+    position: relative;
+}
+
+.left-section {
+    width: 951.30px;
+    height: 429.67px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.movie-trailer-section {
+    width: 642.92px;
+    height: 429.67px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.movie-trailer {
+    width: 642.92px;
+    height: 429.67px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    border: 1px solid;
+}
+
+.play-trailer {
+    width: 133px;
+    height: 19px;
+    left: 74px;
+    top: 384.84px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.thumbnail-image {
+    width: 298.87px;
+    height: 429.67px;
+    left: 652.43px;
+    top: -0px;
+    position: absolute;
+    border: 1px solid;
+}
+
+.right-section {
+    width: 428px;
+    height: 324.35px;
+    left: 989px;
+    top: 0.49px;
+    position: absolute;
+}
+
+.rating-section {
+    width: 427.65px;
+    height: 130.35px;
+    left: 0.35px;
+    top: 0px;
+    position: absolute;
+}
+
+.rating-box {
+    width: 424.15px;
+    height: 62.66px;
+    left: 3.50px;
+    top: 67.69px;
+    position: absolute;
+}
+
+.rating-circle {
+    width: 34.28px;
+    height: 32.65px;
+    left: 0px;
+    top: 0.65px;
+    position: absolute;
+    background: #FBB500;
+    border: 1px solid;
+}
+
+.rating-value {
+    width: 56.29px;
+    height: 22.99px;
+    left: 37.73px;
+    top: 15.24px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 29px;
+    word-wrap: break-word;
+}
+
+rating-text {
+    width: 55.49px;
+    height: 13.48px;
+    left: 38.52px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 17px;
+    word-wrap: break-word;
+}
+
+director-info {
+    width: 233px;
+    height: 38px;
+    left: 191.15px;
+    top: 24.66px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+release-info {
+    width: 216.42px;
+    height: 19.03px;
+    left: 190.73px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+movie-title {
+    width: 283.81px;
+    height: 45.98px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 58px;
+    word-wrap: break-word;
+}
+
+movie-description {
+    width: 428px;
+    height: 191px;
+    left: 0px;
+    top: 133.35px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    display: inline-flex;
+}
+
+separator-line {
+    width: 428px;
+    height: 0px;
+    border: 0.50px white solid;
+}
+
+movie-synopsis {
+    width: 410.65px;
+    height: 88.91px;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 19px;
+    word-wrap: break-word;
+}
+
+genre-info {
+    width: 411px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 19px;
+    word-wrap: break-word;
+}
+
+actor-info {
+    width: 411px;
+    height: 41px;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 19px;
+    word-wrap: break-word;
 }

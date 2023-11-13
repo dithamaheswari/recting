@@ -5,8 +5,6 @@ ini_set('display_errors', '1');
 
 class Filmselected extends Controller {
     public function index() {
-        if (isset($_SESSION['user'])) {
-           
 
         $data['title'] = "Halaman Filmselected";
         $data['movies_recent'] = $this->model('film_model')->getAllMovies();
@@ -31,16 +29,13 @@ class Filmselected extends Controller {
             }
         } else {
             
-            $data['title'] = 'Movie ID not provided in the URL.';
+            $data['title'] = 'Movie ID ngga masuk URL.';
             $this->view("Templates/header", $data);
             $this->view("home/filmselected", $data);
             $this->view("Templates/footer", $data);
         }
-    } else {
-        header("Location:" . BASEURL . "login");
-        exit;
-      }
-    }
+    } 
+    
 
 
 }

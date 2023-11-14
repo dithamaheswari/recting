@@ -19,7 +19,7 @@
 }
 
 :root {
-    --primary-color: 53, 127, 212;
+    --primary-color: 255, 0, 0;
     --dark-color: 24, 27, 25;
     --light-color: 255, 255, 255;
 
@@ -45,7 +45,8 @@ body {
     padding: 52px 42px;
     border-radius: 4px;
     border: var(--border-style);
-    background-color: rgba(var(--light-color), 0.03);
+    background-color: rgba(var(--dark-color), 0.9);
+    /* background-color: rgba(var(--light-color), 0.03); */
 }
 
 .login .title {
@@ -131,7 +132,7 @@ body {
 }
 
 .dashboard .sidebar {
-    background-color: rgba(var(--dark-color), 1);
+    /* background-color: rgba(var(--dark-color), 1); */
     border-right: var(--border-style);
     padding: 42px 32px;
     min-height: 100vh;
@@ -139,6 +140,11 @@ body {
 }
 
 .dashboard .brand-logo {
+    margin-bottom: 42px;
+    width: 92px;
+}
+
+.login .brand-logo {
     margin-bottom: 42px;
     width: 92px;
 }
@@ -224,4 +230,14 @@ nav .nav-link:hover {
 .topbar .username {
     font-size: 1.125rem;
     color: rgba(var(--light-color), 1);
+}
+
+.bg-black {
+    background-color: #181b19;
+    background-image: url('../img/login.jpg');
+    background-size: cover;
+  }
+
+.bg-red {
+    background-color: #e00000;
 }

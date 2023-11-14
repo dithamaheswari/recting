@@ -10,27 +10,32 @@
     <link href="<?= BASEURL; ?>assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-black">
     <main class="login">
+        <a href="<?= BASEURL; ?>"><img src="<?= BASEURL; ?>assets/img/logo recting.webp" alt="Brand Logo" class="img-fluid mt-2 brand-logo login" ></a>                    
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-xxl-5">
-                    <div class="card-login mt-5">
+                <div class="card-login mt-0">
                         <div class="flasher-wrap w-100">
                             <?php Flasher::flash(); ?>
                         </div>
                         <h2 class="title text-center">Welcome Back</h2>
                         <form class="form d-flex flex-column" action="<?= BASEURL; ?>/login/loginAction" method="post">
                             <div class="input-group d-flex flex-column">
-                                <label for="email">Email</label>
+                                <label for="email"><h5>Email</h5></label>
                                 <input type="text" class="input" id="email" name="email" placeholder="Enter your email..">
                             </div>
                             <div class="input-group d-flex flex-column">
-                                <label for="password">Password</label>
+                                <label for="password"><h5>Password</h5></label>
                                 <input type="password" class="input" id="password" name="password" placeholder="Enter your password..">
                             </div>
                             <button type="submit" class="button-primary w-100 text-center" style="margin-top: 18px;">Login Account</button>
                         </form>
+                        <hr>
+                            <div class="text-light text-center">
+                            <label><h6>Don't have an account?</h6></label> <a href="<?= BASEURL; ?>register"><strong>Register here</strong></a>
+                            </div>
                     </div>
                 </div>
             </div>

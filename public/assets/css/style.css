@@ -41,6 +41,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .login .card-login {
     padding: 52px 42px;
     border-radius: 4px;
@@ -231,6 +232,71 @@ nav .nav-link:hover {
     font-size: 1.125rem;
     color: rgba(var(--light-color), 1);
 }
+
+.header-container {
+    width: 1417px;
+    height: 429.67px;
+    position: relative;
+}
+
+.left-section {
+    width: 951.30px;
+    height: 429.67px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.movie-trailer-section {
+    width: 642.92px;
+    height: 429.67px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.movie-trailer {
+    width: 642.92px;
+    height: 429.67px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    border: 1px solid;
+}
+
+.play-trailer {
+    width: 133px;
+    height: 19px;
+    left: 74px;
+    top: 384.84px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.thumbnail-image {
+    width: 298.87px;
+    height: 429.67px;
+    left: 652.43px;
+    top: -0px;
+    position: absolute;
+    border: 1px solid;
+}
+
+.right-section {
+    width: 428px;
+    height: 324.35px;
+    left: 989px;
+    top: 0.49px;
+    position: absolute;
+}
+
+
+
 
 .bg-black {
     background-color: #181b19;

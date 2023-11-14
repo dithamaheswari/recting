@@ -119,9 +119,11 @@
                                 <?php foreach ($data['movies_rating'] as $movie) { ?>
                                     <div class="swiper-slide">
                                         <img src="<?= BASEURL ?>assets/img/thumbnails/<?= $movie['thumbnail'] ?>" alt="Thumbnail Movie" class="img-fluid rounded" style="aspect-ratio: 2.9/4;">
-                                        <div class="wrapper p-3 rounded-bottom" style="background-color: rgba(255,255,255,0.04);">
-                                            <p class="text-light mb-0"><?= $movie['title']; ?> <span class="text-secondary">(<?= $movie['rating']; ?>)</span></p>
-                                        </div>
+                                        <a href="<?= BASEURL ?>filmselected?id=<?= $movie['id']; ?>">
+                                            <div class="wrapper p-3 rounded-bottom" style="background-color: rgba(255,255,255,0.04);">
+                                                <p class="text-light mb-0"><?= $movie['title']; ?> <span class="text-secondary">(<?= $movie['rating']; ?>)</span></p>
+                                            </div>
+                                        </a>
                                     </div>
                                 <?php } ?>
                             </div>

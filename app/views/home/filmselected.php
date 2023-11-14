@@ -44,14 +44,14 @@
         </div>
     </nav>
 
-    <main class="home mt-5">
+<main class="home mt-5">
     
 
-<div class="container">
+    <div class="container">
 
 
 
-    <!-- header-->
+                <!-- header-->
     
                 
                 <section class="header">
@@ -161,76 +161,75 @@
                 
 
 
-    <!-- Comment-->
-    <div class="col-3 ">
-    <div class="row mb-5 mt-5 d-flex">
-            
-            <h2 class="text-warning mb-5">Comments</h2>
-                <form action="" method="post">
-                                   
-                    <div class="rateyo" id= "rating"
-                    data-rateyo-rating="4"
-                    data-rateyo-num-stars="5"
-                    data-rateyo-score="3">
-                    </div>
-                    <span class='result'>0</span>
-                    <input type="hidden" name="user_rating">
+        <!-- Comment-->
+        <div class="col-3 ">
+            <div class="row mb-5 mt-5 d-flex">
+                
+                <h2 class="text-warning mb-5">Comments</h2>
+                    <form action="" method="post">
+                                    
+                        <div class="rateyo" id= "rating"
+                        data-rateyo-rating="4"
+                        data-rateyo-num-stars="5"
+                        data-rateyo-score="3">
+                        </div>
+                        <span class='result'>0</span>
+                        <input type="hidden" name="user_rating">
 
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 
-                    <script>
+                        <script>
 
 
-                        $(function () {
-                            $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
-                                var rating = data.rating;
-                                $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
-                                $(this).parent().find('.result').text('rating :'+ rating);
-                                $(this).parent().find('input[name=rating]').val(rating);
+                            $(function () {
+                                $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+                                    var rating = data.rating;
+                                    $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+                                    $(this).parent().find('.result').text('rating :'+ rating);
+                                    $(this).parent().find('input[name=rating]').val(rating);
+                                });
                             });
-                        });
 
-                    </script>
+                        </script>
 
-                <div class="mb-3">
-                  <label for="comment" class="form-label">Comment</label>
-                  <textarea class="form-control" name="comment" id="" rows="3" placeholder="add comment"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="" class="form-label">Tanggal</label>
-                  <input type="date"
-                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                        <div class="mb-3">
+                        <label for="comment" class="form-label">Comment</label>
+                        <textarea class="form-control" name="comment" id="" rows="3" placeholder="add comment"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                        <label for="" class="form-label">Tanggal</label>
+                        <input type="date"
+                            class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
 
-                </div>
-                
-                <button type="submit" class="btn btn-danger mb-3">Submit</button>
-                
-            </form>
-                      
-                        <hr>
-                <?php foreach($data['comment'] as $comment) :?>
-                <ul>
-                <li><?= $comment['username'];?></li>
-                    <li><?= $comment['user_rating'];?></li>
-                    <li><?= $comment['comment'];?></li>
-                    <li><?= $comment['tgl'];?></li>
+                        </div>
                     
-                
-                </ul>
-                <form action="" method="POST">
-                
-                <?php endforeach; ?>
+                        <button type="submit" class="btn btn-danger mb-3">Submit</button>
+                    
+                    </form>
+                        
+                    <hr>
+                    <?php foreach($data['comment'] as $comment) :?>
+                    <ul>
+                    <li><?= $comment['username'];?></li>
+                        <li><?= $comment['user_rating'];?></li>
+                        <li><?= $comment['comment'];?></li>
+                        <li><?= $comment['tgl'];?></li>
+                        
+                    
+                    </ul>
+                                       
+                    <?php endforeach; ?>
             </div>
         </div>
-     
-                </div>
+        
+    </div>
 
-</div>
+</main>
 
-</div></main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
@@ -254,6 +253,7 @@
             },
         });
     </script>
+    
 </body>
 
 </html>

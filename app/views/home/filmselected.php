@@ -52,8 +52,7 @@
 
 
                 <!-- header-->
-    
-                
+                <!-- kurapikan agar winda tidak bingung...-->
                 <section class="header">
                     <div style="width: 1417px; height: 429.67px; position: relative">
                         <div style="width: 951.30px; height: 429.67px; left: 0px; top: 0px; position: absolute">

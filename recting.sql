@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 12, 2023 at 09:21 PM
+-- Host: localhost
+-- Generation Time: Nov 14, 2023 at 02:57 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -103,15 +103,19 @@ CREATE TABLE `users` (
   `id` int NOT NULL,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `role` enum('super admin','user') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
+(1, 'admin', 'admin@gmail.com', 'admin', 'super admin'),
+(2, 'user', 'user@gmail.com', 'user', 'user'),
+(3, 't', 't@gmail.com', '12345', 'user'),
+(4, 'winda', 'winda@gmailcom', '54321', 'user');
 
 --
 -- Indexes for dumped tables
@@ -143,7 +147,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
